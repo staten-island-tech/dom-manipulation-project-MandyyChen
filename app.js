@@ -7,7 +7,13 @@ const DOMSelectors = {
 };
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log(DOMSelectors.firstName.value);
+
+    document
+    .insertAdjacentHTML(` <input type="text" name="firstName" class="first-name"/>`
+
+    );
+});
+/*
     DOMSelectors.h2s.forEach(
         (el) => (el.textContext = DOMSelectors.firstName.value)
     );
