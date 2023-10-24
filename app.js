@@ -7,7 +7,8 @@ const DOMSelectors = {
 };
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
-
+    //const Album = makeAlbum()
+    //addCard(Album)
     document
     .insertAdjacentHTML(` <input type="text" name="firstName" class="first-name"/>`
 
@@ -16,5 +17,4 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 /*
     DOMSelectors.h2s.forEach(
         (el) => (el.textContext = DOMSelectors.firstName.value)
-    );
-});
+    ); */
