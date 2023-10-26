@@ -7,11 +7,21 @@ const DOMSelectors = {
 };
     
 
-DOMSelectors.form.addEventListener("submit", function () {
-    let firstName = DOMSelectors.firstName.value;
-    DOMSelectors.document.insertAdjacentHTML(<input type="text" name="firstName" class="first-name"> ${DOMSelectors.firstName.value}` </h2>),
+DOMSelectors.form.addEventListener("submit", function (event) {
+event.preventDefault();
+
+document
+    .querySelector(".card")
+    .insertAdjacentHTML(    
+    "afterbegin", 
+    `<div class="card" id="box">
+     <h2 class="card-title"> ${DOMSelectors.firstName.value} </h2>
+     <img src="Album.jpg" alt="Red" class="card-image">
+     <button class="button"> Remove </button></div>`)
+
+    DOMSelectors.h2s.forEach((el) => (el.textContent = DOMSelectors.firstName.value));
 });
-    console.log(DOMSelectors.firstName.value);
+
 
 /*
     DOMSelectors.h2s.forEach(
