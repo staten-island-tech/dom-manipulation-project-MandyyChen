@@ -23,14 +23,20 @@ document
 });
 
 
-/*
-    DOMSelectors.h2s.forEach(
-        (el) => (el.textContext = DOMSelectors.firstName.value));
-//const Album = makeAlbum()
-    //addCard(Album)
-});
+function clear(){
 
-     document
-    .insertAdjacentHTML(` <input type="text" name="firstName" class="first-name"/>`
-   
-    ); */
+}
+//const Album = makeAlbum()
+//addCard(Album)
+//clearFields()
+//addRemoveButtons
+
+function remove(){
+    let butns = document.querySelector("button");
+    butns.forEach((button)=>button.addEventListener("click", function (event) {
+        console.log(event.target.parentElement);
+      })
+   );
+}
+
+remove();

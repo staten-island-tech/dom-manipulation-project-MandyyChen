@@ -1,11 +1,24 @@
 
+#form{
+    background-color:rgb(119, 167, 189);
+    display: flex;
+    margin: auto;
+}
+
+.button{
+    margin: auto;
+    background-color:#e992a4;
+    font-size: 30px;
+    align-items: center;
+    width: 20%;
+    padding: 10px;
+}
 .card {
     display: flex;
     background-color:rgb(226, 181, 181);
-    width: 70vw;
-    flex-wrap: wrap;
+    max-width: 80%;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     margin: 1rem auto;
 }
 
@@ -14,12 +27,10 @@
     margin: 2rem 0;
     align-items: center;
     text-transform: uppercase;
-    color: #1e3025;
+    color: #000000;
 }
 
 .card-image {
-    width: 30%;
-    height: 450px;
-    object-fit: cover;
-    object-position: 55% 55%; 
+    max-width: 80%;
+    margin: auto;
 }
