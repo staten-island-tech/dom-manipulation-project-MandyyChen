@@ -2,6 +2,8 @@ const DOMSelectors = {
     form: document.querySelector("#form"),
     firstName: document.querySelector(".first-name"),
     h2s: document.querySelectorAll("h2"),
+    button: document.querySelector(".button"),
+    imgs: document.querySelectorAll("img"),
     //select the textbox
     //select ALL the h2s in one property
 };
@@ -9,6 +11,7 @@ const DOMSelectors = {
 
 DOMSelectors.form.addEventListener("submit", function (event) {
 event.preventDefault();
+
 
 document
     .querySelector(".card")
@@ -20,15 +23,21 @@ document
      <button class="button"> Remove </button></div>`)
 
     DOMSelectors.h2s.forEach((el) => (el.textContent = DOMSelectors.firstName.value));
-});
+    });
 
 
-function clear(){
+//clearFields()
+DOMSelectors.button.addEventListener("click", function (clear) {
+    clear.preventDefault();
+    function clearfields(){
+    DOMSelectors.h2s.forEach((el) => (el.textcontent = ""));
 
 }
+clearfields();
+});
 //const Album = makeAlbum()
 //addCard(Album)
-//clearFields()
+
 //addRemoveButtons
 
 function remove(){
