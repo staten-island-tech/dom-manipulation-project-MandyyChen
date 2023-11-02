@@ -18,7 +18,7 @@ while(money>0){
     console.log(money);
     money--;
 } */
-const numsArray = [
+/* const numsArray = [
     1,2,3,4,5,6,7,8,9,10,
 ];
 
@@ -40,18 +40,21 @@ if (found === null) {
     }
 }
 
-linearSearch(11, numsArray);
+linearSearch(11, numsArray); */
 // searches through something until it finds the wanted value
 // takes a long time (thinking going through every student to find Mandy)
+let spaces = "7"
+let day1 = "CCCCCCC"
+let day2 = "C.C.C.C"
 
-let dayOne =
-}
-let dayTwo =
-
-function findParking (occupied, dayOne){
-    for(i=0; i < dayOne ; i++){
-        if(arr[i] === "C"){
-            
+function findParking (spaces){
+    let a = 0
+    for(i=0; i < spaces ; i++){
+        if(day1[a] === "C" && day2[a] === "C"){
+            a++
+            console.log(a)
         }
     }
 }
+
+findParking();
