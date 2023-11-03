@@ -43,7 +43,16 @@ if (found === null) {
 linearSearch(11, numsArray); */
 // searches through something until it finds the wanted value
 // takes a long time (thinking going through every student to find Mandy)
-let spaces = "7"
+
+
+
+
+
+
+
+
+// Practice Problem One //
+/* let spaces = "7"
 let day1 = "CCCCCCC"
 let day2 = "C.C.C.C"
 
@@ -57,4 +66,19 @@ function findParking (spaces){
     }
 }
 
-findParking();
+findParking(); */
+let num = 6
+let n1 = 0
+let n2 = 1
+let sum =""
+
+function fibonacci (num){
+
+    for(i=2; i < num; i++){
+    sum = n1 + n2
+    n1 = n2
+    n2 = sum
+    }
+    console.log(sum);
+}
+fibonacci(num)
