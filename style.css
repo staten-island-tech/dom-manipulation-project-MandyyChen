@@ -1,36 +1,76 @@
+html{
+    background-color: #efd7e5;
+}
 
 #form{
-    background-color:rgb(119, 167, 189);
-    display: flex;
-    margin: auto;
+padding: 5px;
+font-size: 20px;
+font-family: 'Open Sans', sans-serif;
+margin: 0 auto;
+flex-wrap: wrap;
+justify-content: space-around;
+border-radius: 12px;
+align-items: center;
 }
 
-.button{
-    margin: auto;
-    background-color:#e992a4;
-    font-size: 30px;
-    align-items: center;
-    width: 20%;
-    padding: 10px;
+h1{
+    text-align: center;
+    font-family: 'Lobster', sans-serif;
+    font-size: 70px;
+    color: #e992a4;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+.submit-button {
+    background-color:#e992a4;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.submit-button:hover {
+    background-color: #dddae8;
+}
+
+.remove{
+    margin: 1.1rem;
+    background-color:#e992a4;
+    font-size: 15px;
+    align-items: center;
+    width: 15%;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.remove:hover{
+    background-color: #dddae8;
+}
+
 .card {
     display: flex;
-    background-color:rgb(226, 181, 181);
-    max-width: 80%;
+    background-color: #f1bcd5;
+    max-width: 60%;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    margin: 1rem auto;
+    margin: 1.1rem auto;
+    box-shadow: 10px 10px #e992a4;
 }
 
-.card-title {
-    font-size: 2.5rem;
-    margin: 2rem 0;
+.caption-text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.title-name {
+    font-size: 30px;
+    margin: 1.3rem 0;
     align-items: center;
     text-transform: uppercase;
-    color: #000000;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .card-image {
-    max-width: 80%;
+    max-width: 50%;
     margin: auto;
-}
+} 

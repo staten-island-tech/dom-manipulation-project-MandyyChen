@@ -1,51 +1,44 @@
 const DOMSelectors = {
     form: document.querySelector("#form"),
-    firstName: document.querySelector(".first-name"),
-    h2s: document.querySelectorAll("h2"),
-    button: document.querySelector(".button"),
-    imgs: document.querySelectorAll("img"),
+    titleName: document.getElementById("title-name"),
+    captionText: document.getElementById("caption-text"),
+    imageLink: document.getElementById("image-link"),
+    box: document.querySelector("#box"),
+    card: document.querySelector(".card"),
+    button: document.getElementById("btn"),
     //select the textbox
     //select ALL the h2s in one property
 };
     
 
-DOMSelectors.form.addEventListener("submit", function (event) {
-event.preventDefault();
+function addcard(){
+    DOMSelectors.box.insertAdjacentHTML("afterend",
+        `<div class="card" id="box">
+        <h1 class="title-name"> ${DOMSelectors.titleName.value} </h1>
+        <img src= "${DOMSelectors.imageLink.value}" alt="image" class="card-image">
+        <h3 class="caption-text"> ${DOMSelectors.captionText.value} </h3>
+        <button class="remove"> Remove </button>
+        </div>`);
+}
 
-
-document
-    .querySelector(".card")
-    .insertAdjacentHTML(    
-    "afterbegin", 
-    `<div class="card" id="box">
-     <h2 class="card-title"> ${DOMSelectors.firstName.value} </h2>
-     <img src="Album.jpg" alt="Red" class="card-image">
-     <button class="button"> Remove </button></div>`)
-
-    DOMSelectors.h2s.forEach((el) => (el.textContent = DOMSelectors.firstName.value));
+function removecard(){
+    document.querySelectorAll(".remove").forEach((button) => {
+       button.addEventListener("click", function(event){
+           event.target.parentElement.remove();
+       });
     });
-
-
-//clearFields()
-DOMSelectors.button.addEventListener("click", function (clear) {
-    clear.preventDefault();
-    function clearfields(){
-    DOMSelectors.h2s.forEach((el) => (el.textcontent = ""));
-
-}
-clearfields();
-});
-//const Album = makeAlbum()
-//addCard(Album)
-
-//addRemoveButtons
-
-function remove(){
-    let butns = document.querySelector("button");
-    butns.forEach((button)=>button.addEventListener("click", function (event) {
-        console.log(event.target.parentElement);
-      })
-   );
 }
 
-remove();
+function clearFields() {
+   DOMSelectors.titleName.value ="";
+   DOMSelectors.imageLink.value="";
+   DOMSelectors.captionText.value="";
+}
+
+DOMSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    addcard();
+    removecard();
+    clearFields();
+    });
+    
